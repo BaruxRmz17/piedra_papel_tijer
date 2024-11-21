@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- Define el tipo de documento como HTML5 y establece el idioma a inglés -->
+<head>
+    <meta charset="UTF-8"> <!-- Codificación de caracteres en UTF-8 para soportar símbolos y caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura el ancho del sitio para adaptarse a dispositivos móviles -->
+    <link rel="stylesheet" href="styles.css"> <!-- Vincula el archivo CSS externo para los estilos -->
+    <link rel="icon" href=""> <!-- Define un ícono para la página (vacío aquí, se puede añadir una ruta de imagen) -->
+    <title>Piedra Papel o Tijera</title> <!-- Título de la página que aparecerá en la pestaña del navegador -->
+</head>
+<body>
+    <!-- Encabezado principal de la página -->
+    <header>
+        <h1>Piedra Papel o Tijera</h1> <!-- Título del juego en el encabezado -->
+    </header>
+
+    <!-- Tablero de puntuación que muestra las puntuaciones de usuario y computadora -->
+    <div class="score-board">
+        <div id="user-label" class="badge">user</div> <!-- Etiqueta para el usuario, con clase 'badge' para diseño -->
+        <div id="computer-label" class="badge">comp</div> <!-- Etiqueta para la computadora, también con 'badge' -->
+        <span id="user-score"> 0 </span>:<span id="computer-score"> 0 </span> <!-- Muestra las puntuaciones iniciales (0:0) de usuario y computadora -->
+    </div>
+
+    <!-- Mensaje de resultado que mostrará el estado actual del juego -->
+    <div class="result">
+        <p>Piedra Papel Tijera. !GANASTE¡</p> <!-- Texto de resultado inicial, cambiará según el resultado del juego -->
+    </div>
+
+    <!-- Opciones de juego que el usuario puede seleccionar -->
+    <div class="choices">
+        <!-- Opción de piedra -->
+        <div class="choice" id="r"> <!-- Elemento de opción con clase 'choice' e id 'r' para piedra -->
+            <img src="Img/piedra.png" alt="Piedra"> <!-- Imagen de piedra con texto alternativo para accesibilidad -->
+        </div>
+        <!-- Opción de papel -->
+        <div class="choice" id="p"> <!-- Elemento de opción con clase 'choice' e id 'p' para papel -->
+            <img src="Img/papel.png" alt="Papel"> <!-- Imagen de papel con texto alternativo para accesibilidad -->
+        </div>
+        <!-- Opción de tijeras -->
+        <div class="choice" id="t"> <!-- Elemento de opción con clase 'choice' e id 't' para tijeras -->
+            <img src="Img/tijeras.png" alt="Tijeras"> <!-- Imagen de tijeras con texto alternativo para accesibilidad -->
+        </div>
+    </div>
+    
+    <!-- Mensaje de acción que indica al usuario que seleccione un movimiento -->
+    <p id="action-message">Selecciona tu Movimiento </p> <!-- Mensaje para guiar al usuario a hacer su elección -->
+
+    <!-- Contenedor para el botón de reinicio -->
+    <div class="reset-container">
+        <button id="reset-btn">Reiniciar Juego</button> <!-- Botón para reiniciar el juego, con id para referencia en JavaScript -->
+    </div>
+    
+    <!-- Enlace al archivo de script JavaScript que maneja la lógica del juego -->
+    <script type="module" src="app.js"></script> <!-- Archivo JavaScript externo que controla la lógica del juego -->
+</body>
+</html>

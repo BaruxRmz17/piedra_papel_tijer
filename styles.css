@@ -1,0 +1,160 @@
+/* Importa la fuente "Play" desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+
+/* Estilos Generales */
+* {
+    margin: 0; /* Elimina el margen predeterminado de todos los elementos */
+    padding: 0; /* Elimina el relleno predeterminado de todos los elementos */
+    box-sizing: border-box; /* Define el box-sizing para incluir el borde y padding en el ancho y alto del elemento */
+}
+
+body {
+    background-color: #1A0E29; /* Establece un fondo oscuro para la página */
+}
+
+/* Encabezado */
+header {
+    background: #230642; /* Color de fondo púrpura oscuro para el encabezado */
+    height: 100px; /* Altura del encabezado */
+    display: flex; /* Flexbox para centrar contenido */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+}
+
+header > h1 {
+    color: white; /* Color de texto blanco */
+    text-align: center; /* Alineación centrada del texto */
+    font-family: Play, sans-serif; /* Fuente personalizada "Play" */
+}
+
+/* Estilos para el tablero de puntuación */
+.score-board {
+    margin: 20px auto; /* Espaciado superior e inferior, centrado horizontalmente */
+    border: 3px solid white; /* Borde blanco alrededor del tablero */
+    border-radius: 4px; /* Borde redondeado */
+    text-align: center; /* Texto centrado */
+    width: 200px; /* Ancho del tablero de puntuación */
+    color: white; /* Color de texto blanco */
+    font-size: 40px; /* Tamaño de fuente */
+    padding: 15px 20px; /* Relleno interno */
+    font-family: Play, sans-serif; /* Fuente personalizada */
+    position: relative; /* Posicionamiento relativo para ubicar los distintivos de usuario y computadora */
+}
+
+/* Estilo para los distintivos de usuario y computadora */
+.badge {
+    background: #E2584D; /* Color de fondo rojo */
+    color: white; /* Color de texto blanco */
+    font-size: 14px; /* Tamaño de fuente pequeño */
+    padding: 2px 10px; /* Relleno interno */
+    font-family: Play, sans-serif; /* Fuente personalizada */
+}
+
+/* Posicionamiento del distintivo de usuario */
+#user-label {
+    position: absolute; /* Posicionamiento absoluto relativo al contenedor */
+    top: 30px; /* Espaciado desde la parte superior del tablero */
+    left: -25px; /* Posición a la izquierda del tablero */
+}
+
+/* Posicionamiento del distintivo de la computadora */
+#computer-label {
+    position: absolute; /* Posicionamiento absoluto relativo al contenedor */
+    top: 30px; /* Espaciado desde la parte superior del tablero */
+    right: -30px; /* Posición a la derecha del tablero */
+}
+
+/* Estilos para el resultado */
+.result {
+    font-size: 40px; /* Tamaño de fuente grande */
+    color: white; /* Color de texto blanco */
+}
+
+.result > p {
+    text-align: center; /* Texto centrado */
+    font-weight: bold; /* Texto en negrita */
+    font-family: Play, sans-serif; /* Fuente personalizada */
+}
+
+/* Contenedor de las opciones de juego */
+.choices {
+    margin-top: 50px; /* Espaciado superior */
+    text-align: center; /* Centrado de opciones de juego */
+}
+
+/* Estilos de cada opción de juego (piedra, papel, tijera) */
+.choice {
+    border: 4px solid white; /* Borde blanco */
+    display: inline-block; /* Mostrar en línea */
+    margin: 0 20px; /* Espaciado horizontal entre opciones */
+    padding: 10px; /* Relleno interno */
+    border-radius: 50%; /* Forma circular */
+    transition: all 0.3s ease; /* Transición para efectos de hover */
+}
+
+/* Efecto al pasar el cursor sobre una opción */
+.choice:hover {
+    cursor: pointer; /* Cambia el cursor a pointer */
+    background: #14203d; /* Color de fondo oscuro al pasar el cursor */
+}
+
+/* Mensaje de acción */
+#action-message {
+    text-align: center; /* Centrado del texto */
+    color: white; /* Color de texto blanco */
+    font-family: Play, sans-serif; /* Fuente personalizada */
+    font-weight: bold; /* Texto en negrita */
+    font-size: 20px; /* Tamaño de fuente */
+    margin-top: 20px; /* Espaciado superior */
+}
+
+/* Efecto de neón para opciones al cargar */
+.neon-default {
+    border: 4px solid #8a2be2; /* Color neón inicial */
+    box-shadow: 0 0 10px #8a2be2; /* Sombra neón */
+    border-radius: 50%; /* Forma circular */
+    transition: all 0.3s ease; /* Transición suave */
+}
+
+/* Efecto de brillo verde cuando el usuario gana */
+.green-glow {
+    border: 4px solid #4dcc7d; /* Borde verde */
+    box-shadow: 0 0 10px #31b43a; /* Sombra verde */
+}
+
+/* Efecto de brillo rojo cuando el usuario pierde */
+.red-glow {
+    border: 4px solid #fc131b; /* Borde rojo */
+    box-shadow: 0 0 10px #d01115; /* Sombra roja */
+}
+
+/* Efecto de brillo gris para empate */
+.gray-glow {
+    border: 4px solid #464647; /* Borde gris */
+    box-shadow: 0 0 10px #25292b; /* Sombra gris */
+}
+
+/* Contenedor del botón de reinicio */
+.reset-container {
+    display: flex; /* Flexbox para centrar el botón */
+    justify-content: center; /* Centrado horizontal */
+    margin-top: 20px; /* Espaciado superior */
+}
+
+/* Estilos del botón de reinicio */
+#reset-btn {
+    background-color: #1a1a2e; /* Fondo oscuro */
+    color: #00ffcc; /* Texto en color neón */
+    padding: 12px 24px; /* Relleno interno */
+    font-size: 18px; /* Tamaño de fuente */
+    border: 2px solid #00ffcc; /* Borde neón */
+    border-radius: 8px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor a pointer */
+    transition: all 0.3s ease; /* Transición para efecto de hover */
+    text-align: center; /* Centrado de texto */
+}
+
+/* Efecto de neón al pasar el cursor sobre el botón de reinicio */
+#reset-btn:hover {
+    box-shadow: 0 0 15px #00ffcc, 0 0 20px #00ffcc; /* Sombra neón */
+}
